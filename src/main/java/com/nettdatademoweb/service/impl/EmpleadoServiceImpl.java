@@ -53,6 +53,12 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 		
 		return  empleadorepo.listarCuyoNombreEs(cad);
 	}
+
+	@Override
+	public Empleado inserta(Empleado emp) {
+		
+		return empleadorepo.save(emp);
+	}
 	
 	
 	

@@ -15,6 +15,8 @@ public interface EmpleadoService {
 	 List<Empleado> listarConJPA(Integer pId , String contiene);
 	 
 	 List<Empleado> listarFiltroNombreEs(String cad);
+
+	Empleado inserta(Empleado emp);
 	
 	
 		
