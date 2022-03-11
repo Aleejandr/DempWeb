@@ -1,0 +1,4 @@
+2022-03-11 09:53:27 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM EMPLEADO WHERE NOMBRE LIKE %[*]O%"
+Syntax error in SQL statement "SELECT * FROM EMPLEADO WHERE NOMBRE LIKE %[*]O%"; SQL statement:
+select * from empleado where nombre like %o% [42000-200]

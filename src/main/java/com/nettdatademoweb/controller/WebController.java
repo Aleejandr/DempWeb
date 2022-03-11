@@ -13,17 +13,29 @@ public class WebController {
 	
 	
 	@Autowired
-	EmpleadoService empleadoservi;
+	EmpleadoService empleadoservice;
 	
  	@GetMapping("/saludo")
 	public String greeting(@RequestParam(name="name", required=false, defaultValue="Mundo") 
 							String name, Model model) {
 		model.addAttribute("name", name);
-		empleadoservi.registrar(name);
+		empleadoservice.registrar(name);
 		return "hola";
 	}
  	
+ 	@GetMapping("/listarEmpleados")
+ 	public String listarEmp(Model model) {
+ 		
+ 		model.addAttribute("listaEmp" , empleadoservice.listar());
+ 		model.addAttribute("listaEmpConE" , empleadoservice.listarCuyoNombreContiene("e"));
+ 		model.addAttribute("listaJPA" , empleadoservice.listarConJPA(2, "%o%"));
+ 		model.addAttribute("listaEmpNombreExacto" , empleadoservice.listarFiltroNombreEs("Rocío"));
+ 		
+ 		return "listarDeEmpleados";
+ 	}
  	
+ 	
+
  	
  	@GetMapping("/error")
  	public String errorPage() {
