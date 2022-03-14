@@ -19,6 +19,16 @@
 	<dependencies>
 	
 	
+	<!-- Seguridad-->
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>-->
+	<!-- Seguridad-->
+	
+	
+	
+		
 			<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
