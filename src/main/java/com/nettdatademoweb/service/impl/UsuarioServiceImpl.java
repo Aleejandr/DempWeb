@@ -30,6 +30,8 @@ public class UsuarioServiceImpl implements UsuarioService, UserDetailsService {
 		
 		return usuarioDAO.findById(username).get();
 	}
+	
+	
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
